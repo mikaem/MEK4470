@@ -1,3 +1,7 @@
+"""
+Original scripts by Jørgen Høgberget
+Modified by Mikael Mortensen
+"""
 import os, sys, subprocess
 
 #Create the folders as described by the openFOAM tutorial

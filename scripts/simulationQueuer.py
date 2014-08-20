@@ -1,8 +1,9 @@
+"""
+Original scripts by Jørgen Høgberget
+Modified by Mikael Mortensen
+"""
+
 import sys, os, time
-
-
-
-
 
 ############### DESCRIPTION ################
 """
@@ -24,8 +25,6 @@ import sys, os, time
 """
 ##########################################
 
-
-
 class parameters:
     """
     Struct-like class for keeping track of different parameter setups.
@@ -39,16 +38,11 @@ class parameters:
         if not runTimeMod:
             self.runTimeModifiable = 'false'
 
-
-
-
-
 ####### USER INITIALIZATIONS ############
 
 nCores = 2; #number of processor cores aviable
 case = "Cylinder"
 outputToFile = True
-
 
 #Set different parameters for different models (order respective to LESModels list)
 
@@ -68,31 +62,19 @@ outputToFile = True
 
 
 LESModels = [
-	'dynLagrangian', 
-	'homogeneousDynSmagorinsky', 
-	'homogeneousDynSmagorinsky',
-	'homogeneousDynSmagorinsky'
-	]
+    'dynLagrangian', 
+    'homogeneousDynSmagorinsky', 
+    'homogeneousDynSmagorinsky',
+    'homogeneousDynSmagorinsky'
+    ]
 
 Parameters = [
-	parameters(deltaT = 0.0025, endTime=20.0), 
-	parameters(deltaT = 0.0025, endTime=20.0), 
- 	parameters(deltaT = 0.001, endTime=15.0), 
-	parameters(deltaT = 0.0005, endTime=10.0), 	
-	parameters(deltaT = 0.0001, endTime=5.0),
-	]
-
-######################################
-
-
-
-
-
-
-
-
-
-
+    parameters(deltaT = 0.0025, endTime=20.0), 
+    parameters(deltaT = 0.0025, endTime=20.0), 
+    parameters(deltaT = 0.001, endTime=15.0), 
+    parameters(deltaT = 0.0005, endTime=10.0), 	
+    parameters(deltaT = 0.0001, endTime=5.0),
+    ]
 
 ########## FOLDER STRUCTURE ##########
 homeMaster = os.getcwd() + "/"
@@ -108,8 +90,6 @@ print "initializing directory %s" % masterDir
 os.mkdir(masterDir)
 
 ########################################
-
-
 
 ###### CHECKING NECESSITIES #######
 
@@ -129,16 +109,12 @@ if quit:
 
 ##################################
 
-
-
 #Prepare Runtime
 if outputToFile:
     os.system("mkdir %s/Output" % masterDir)
 
 if case == 'Cylinder':
     solver = "pimpleFoam"
-
-
 
 ########### MAIN LOOP ############
 

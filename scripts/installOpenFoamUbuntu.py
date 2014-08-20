@@ -1,3 +1,7 @@
+"""
+Original scripts by Jørgen Høgberget
+Modified by Mikael Mortensen
+"""
 import sys, os
 
 aptSettings = """
